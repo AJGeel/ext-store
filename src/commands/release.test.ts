@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import { extractReleaseNotes } from "../../../src/commands/release";
+import { extractReleaseNotes } from "./release";
 
 const CHANGELOG = `# Changelog
 

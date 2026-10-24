@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import { verify } from "jsonwebtoken";
 
-import { getFirefoxStatus } from "../../../src/stores/firefox";
+import { getFirefoxStatus } from "./firefox";
 
 const ENV = {
   FIREFOX_EXTENSION_ID: "me@example.com",

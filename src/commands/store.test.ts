@@ -1,9 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import {
-  describeStatus,
-  findConflictingVersion,
-} from "../../../src/commands/store";
+import { describeStatus, findConflictingVersion } from "./store";
 
 /** Strips colour codes, so the tests don't depend on the terminal. */
 // eslint-disable-next-line no-control-regex

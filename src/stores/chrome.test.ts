@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 
-import { getChromeStatus } from "../../../src/stores/chrome";
+import { getChromeStatus } from "./chrome";
 
 const ENV = {
   CHROME_PUBLISHER_ID: "publisher-1",

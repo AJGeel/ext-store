@@ -1,11 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import {
-  compareVersions,
-  ensureOk,
-  read,
-  requireEnv,
-} from "../../../src/lib/utils";
+import { compareVersions, ensureOk, read, requireEnv } from "./utils";
 
 describe("compareVersions", () => {
   test.each([
