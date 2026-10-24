@@ -44,6 +44,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "release": "bun src/cli.ts tag-release",
     "prepublishOnly": "bun run typecheck"
   },
   "dependencies": {
