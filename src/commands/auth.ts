@@ -7,10 +7,10 @@
 import { existsSync, readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
 
-import { loadConfig } from "./config";
-import { SCOPE, TOKEN_URL, TokenResponse } from "./chrome";
-import { header, p, pc, step } from "./ui";
-import { ROOT_DIR, ensureOk, read, requireEnv } from "./utils";
+import { loadConfig } from "../config";
+import { SCOPE, TOKEN_URL, TokenResponse } from "../stores/chrome";
+import { header, p, pc, step } from "../lib/ui";
+import { ROOT_DIR, ensureOk, read, requireEnv } from "../lib/utils";
 
 const AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
 const ENV_PATH = resolve(ROOT_DIR, ".env");

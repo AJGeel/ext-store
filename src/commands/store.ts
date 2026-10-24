@@ -5,12 +5,12 @@
 import { readFileSync } from "fs";
 import { resolve } from "path";
 
-import { getChromeStatus, submitToChrome } from "./chrome";
-import { ExtStoreConfig, loadConfig } from "./config";
-import { getFirefoxStatus, submitToFirefox } from "./firefox";
-import { StoreStatus } from "./types";
-import { confirmOrExit, header, p, pc, runTask, step } from "./ui";
-import { DIST_DIR, ROOT_DIR, compareVersions, read } from "./utils";
+import { getChromeStatus, submitToChrome } from "../stores/chrome";
+import { ExtStoreConfig, loadConfig } from "../config";
+import { getFirefoxStatus, submitToFirefox } from "../stores/firefox";
+import { StoreStatus } from "../stores/types";
+import { confirmOrExit, header, p, pc, runTask, step } from "../lib/ui";
+import { DIST_DIR, ROOT_DIR, compareVersions, read } from "../lib/utils";
 
 type Store = {
   name: string;
@@ -51,7 +51,7 @@ const readJson = <T>(path: string): T => JSON.parse(readFileSync(path, "utf8"));
 
 const NAME_WIDTH = 9;
 
-const describeStatus = ({ live, pending }: StoreStatus) =>
+export const describeStatus = ({ live, pending }: StoreStatus) =>
   [
     `live ${live ? pc.green(live) : pc.dim("none")}`,
     pending
@@ -65,7 +65,10 @@ const formatRow = (store: Store, details: string) =>
   `${pc.bold(store.name.padEnd(NAME_WIDTH))}${details}`;
 
 /** The store's version that `version` doesn't beat, if any. */
-const findConflictingVersion = (version: string, status: StoreStatus) => {
+export const findConflictingVersion = (
+  version: string,
+  status: StoreStatus,
+) => {
   const blockingPending =
     status.pending && !RETRYABLE_STATES.includes(status.pending.state)
       ? status.pending.version

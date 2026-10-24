@@ -6,10 +6,10 @@
  *   ext-store auth
  *   ext-store tag-release [--dry-run] [--yes]
  */
-import { auth } from "./auth";
-import { release } from "./release";
-import { runStore } from "./store";
-import { runCli } from "./ui";
+import { auth } from "./commands/auth";
+import { release } from "./commands/release";
+import { runStore } from "./commands/store";
+import { runCli } from "./lib/ui";
 
 const USAGE = "Usage: ext-store status | submit | auth | tag-release";
 

@@ -11,5 +11,5 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "ext-store.config.ts"]
+  "include": ["src", "test", "ext-store.config.ts"]
 }

@@ -1,7 +1,7 @@
 import { existsSync } from "fs";
 import { resolve } from "path";
 
-import { ROOT_DIR } from "./utils";
+import { ROOT_DIR } from "./lib/utils";
 
 export type ExtStoreConfig = {
   /** Shown in the CLI headers, e.g. "UpTab". */

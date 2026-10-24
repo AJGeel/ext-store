@@ -5,15 +5,13 @@
 import { readFileSync } from "fs";
 import { resolve } from "path";
 
-import { loadConfig } from "./config";
-import { confirmOrExit, header, p, pc, step } from "./ui";
-import { ROOT_DIR, read } from "./utils";
+import { loadConfig } from "../config";
+import { confirmOrExit, header, p, pc, step } from "../lib/ui";
+import { ROOT_DIR, read } from "../lib/utils";
 
 /** Returns the lines under `## [V1.2.3]`, up to the next release heading. */
-export const getReleaseNotes = (tag: string) => {
-  const lines = readFileSync(resolve(ROOT_DIR, "CHANGELOG.md"), "utf8").split(
-    "\n",
-  );
+export const extractReleaseNotes = (changelog: string, tag: string) => {
+  const lines = changelog.split("\n");
   const start = lines.findIndex((line) => line.startsWith(`## [${tag}]`));
 
   if (start === -1) {
@@ -29,6 +27,12 @@ export const getReleaseNotes = (tag: string) => {
     .join("\n")
     .trim();
 };
+
+export const getReleaseNotes = (tag: string) =>
+  extractReleaseNotes(
+    readFileSync(resolve(ROOT_DIR, "CHANGELOG.md"), "utf8"),
+    tag,
+  );
 
 const assertReadyToTag = async (tag: string, releaseBranch: string) => {
   if ((await read(["git", "branch", "--show-current"])) !== releaseBranch) {

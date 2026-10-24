@@ -3,8 +3,8 @@ import { resolve } from "path";
 import { sign } from "jsonwebtoken";
 
 import { StoreStatus } from "./types";
-import { runTask, step } from "./ui";
-import { DIST_DIR, ensureOk, read, requireEnv } from "./utils";
+import { runTask, step } from "../lib/ui";
+import { DIST_DIR, ensureOk, read, requireEnv } from "../lib/utils";
 
 // API reference: https://addons-server.readthedocs.io/en/latest/topics/api/
 

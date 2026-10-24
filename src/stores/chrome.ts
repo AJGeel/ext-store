@@ -1,6 +1,6 @@
 import { StoreStatus } from "./types";
-import { p, pc, step } from "./ui";
-import { ensureOk, requireEnv, sleep } from "./utils";
+import { p, pc, step } from "../lib/ui";
+import { ensureOk, requireEnv, sleep } from "../lib/utils";
 
 // API reference: https://developer.chrome.com/docs/webstore/api
 
