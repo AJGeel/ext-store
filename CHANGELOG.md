@@ -1,5 +1,9 @@
 # Changelog
 
+## [V0.1.3] — 2026-10-24
+
+- Dependabot opens a weekly PR for outdated GitHub Actions and Bun dependencies. It waits 14 days after a release first, like `minimumReleaseAge` in `bunfig.toml`. Critical security updates bypass the cooldown.
+
 ## [V0.1.2] — 2026-10-24
 
 - Source reorganised into `commands/`, `stores/` and `lib/`. Import paths such as `@ajgeel/ext-store/ui` are unchanged.
