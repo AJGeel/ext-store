@@ -18,6 +18,12 @@ updates:
       interval: weekly
     cooldown:
       default-days: 14
+    # typescript-eslint doesn't support TypeScript 7 yet:
+    # https://github.com/typescript-eslint/typescript-eslint/issues/10940
+    ignore:
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
     groups:
       dependencies:
         patterns:
