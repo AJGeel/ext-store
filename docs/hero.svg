@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="280" viewBox="0 0 880 280" role="img" aria-label="ext-store: init, screenshots, submit and tag-release, shipping to the Chrome Web Store and Firefox Add-ons">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1b3f"/>
+      <stop offset="1" stop-color="#143c7a"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #fff; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+  <rect width="880" height="280" rx="20" fill="url(#bg)"/>
+  <text x="48" y="84" font-size="44" font-weight="700" letter-spacing="-1">ext-store</text>
+  <text x="48" y="118" font-size="18" fill-opacity=".75">Ship browser extensions from the command line.</text>
+
+  <g class="mono" font-size="15" text-anchor="middle">
+    <rect x="48" y="156" width="150" height="44" rx="22" fill="#fff" fill-opacity=".12"/>
+    <text x="123" y="184">init</text>
+    <rect x="226" y="156" width="150" height="44" rx="22" fill="#fff" fill-opacity=".12"/>
+    <text x="301" y="184">screenshots</text>
+    <rect x="404" y="156" width="150" height="44" rx="22" fill="#fff" fill-opacity=".12"/>
+    <text x="479" y="184">submit</text>
+    <rect x="582" y="156" width="150" height="44" rx="22" fill="#fff" fill-opacity=".12"/>
+    <text x="657" y="184">tag-release</text>
+  </g>
+  <g stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M204 178h16m-5-5l5 5-5 5"/>
+    <path d="M382 178h16m-5-5l5 5-5 5"/>
+    <path d="M560 178h16m-5-5l5 5-5 5"/>
+  </g>
+
+  <g font-size="14" font-weight="600" text-anchor="middle">
+    <rect x="48" y="224" width="170" height="30" rx="15" fill="#4285f4"/>
+    <text x="133" y="244">Chrome Web Store</text>
+    <rect x="230" y="224" width="150" height="30" rx="15" fill="#ff7139"/>
+    <text x="305" y="244">Firefox Add-ons</text>
+  </g>
+
+  <g transform="translate(760 40)">
+    <rect width="76" height="62" rx="9" fill="#fff" fill-opacity=".14"/>
+    <rect width="76" height="14" rx="9" fill="#fff" fill-opacity=".22"/>
+    <circle cx="9" cy="7" r="2.5" fill="#fff"/><circle cx="18" cy="7" r="2.5" fill="#fff"/><circle cx="27" cy="7" r="2.5" fill="#fff"/>
+    <rect x="10" y="26" width="38" height="6" rx="3" fill="#fff" fill-opacity=".7"/>
+    <rect x="10" y="38" width="56" height="6" rx="3" fill="#fff" fill-opacity=".35"/>
+  </g>
+</svg>
