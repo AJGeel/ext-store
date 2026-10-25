@@ -107,7 +107,7 @@ describe("cli", () => {
 
     expect(exitCode).toBe(1);
     expect(output).toContain(
-      "Usage: ext-store status | submit | auth | tag-release",
+      "Usage: ext-store init | status | submit | auth | tag-release | screenshots",
     );
   });
 

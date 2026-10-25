@@ -1,5 +1,14 @@
 # Changelog
 
+## [V0.2.0] — 2026-10-25
+
+- `ext-store screenshots` captures store listing screenshots from the built extension and frames them with a headline. Configure scenes, seeders, action paths and the frame in `ext-store.config.ts`. Needs `playwright`, an optional peer dependency.
+- `ext-store screenshots upload` replaces the Firefox listing's screenshots and opens the Chrome dashboard for the rest.
+- `ext-store init` sets up a repo: config file, `package.json` scripts, `.env.example` and `.gitignore`.
+- `@ajgeel/ext-store/screenshots` exports `waitForImages` and the `Stage` type.
+- The README is rewritten around what you can do, with step-by-step flows.
+- `package.json` ends with a newline again, so the format check passes.
+
 ## [V0.1.3] — 2026-10-24
 
 - Dependabot opens a weekly PR for outdated GitHub Actions and Bun dependencies. It waits 14 days after a release first, like `minimumReleaseAge` in `bunfig.toml`. Critical security updates bypass the cooldown.
