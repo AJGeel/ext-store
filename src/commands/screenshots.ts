@@ -51,6 +51,12 @@ export const selectScenes = (scenes: Scene[], args: string[]) => {
   return selected;
 };
 
+/** A URL stays as it is; anything else is a file path in the repo. */
+export const toUrl = (backdrop: string) =>
+  /^[a-z][a-z\d+.-]*:/i.test(backdrop)
+    ? backdrop
+    : pathToFileURL(resolve(ROOT_DIR, backdrop)).href;
+
 export const headlineLines = (headline: Scene["headline"]) =>
   typeof headline === "string" ? [headline, ""] : headline;
 
@@ -215,7 +221,7 @@ const frame = async (
             headline: headlineLines(scene.headline),
             // File URLs, not data URLs: a multi-megabyte string can crash the page.
             screen: pathToFileURL(rawFile(scene)).href,
-            backdrop: scene.backdrop,
+            backdrop: scene.backdrop && toUrl(scene.backdrop),
             title: screenshots.frame?.title ?? name,
             icon: icon && pathToFileURL(resolve(ROOT_DIR, icon)).href,
             accent: screenshots.frame?.accent ?? DEFAULT_ACCENT,

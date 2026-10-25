@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 
 import type { Scene } from "../config";
-import { headlineLines, resolvePage, selectScenes } from "./screenshots";
+import { headlineLines, resolvePage, selectScenes, toUrl } from "./screenshots";
 
 const scenes: Scene[] = [
   { id: "hero", headline: "Hello" },
@@ -55,5 +55,17 @@ describe("resolvePage", () => {
 
   test("asks for a page when the manifest has none", () => {
     expect(() => resolvePage({ scenes }, {})).toThrow("screenshots.page");
+  });
+});
+
+describe("toUrl", () => {
+  test("keeps URLs", () => {
+    expect(toUrl("https://example.com/a.jpg")).toBe(
+      "https://example.com/a.jpg",
+    );
+  });
+
+  test("turns file paths into file URLs", () => {
+    expect(toUrl("/tmp/a.jpg")).toBe("file:///tmp/a.jpg");
   });
 });
