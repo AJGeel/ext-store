@@ -1,6 +1,6 @@
 {
   "name": "@ajgeel/ext-store",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Submit browser extensions to the Chrome Web Store and Firefox Add-ons.",
   "keywords": [
     "chrome-web-store",

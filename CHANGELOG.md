@@ -1,5 +1,9 @@
 # Changelog
 
+## [V0.2.1] — 2026-10-25
+
+- A scene's `backdrop` can be a file path, as documented. Before, only URLs worked.
+
 ## [V0.2.0] — 2026-10-25
 
 - `ext-store screenshots` captures store listing screenshots from the built extension and frames them with a headline. Configure scenes, seeders, action paths and the frame in `ext-store.config.ts`. Needs `playwright`, an optional peer dependency.
