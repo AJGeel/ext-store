@@ -81,3 +81,5 @@ defineConfig({
 ## License
 
 [MIT](LICENSE)
+
+Banner: Chrome Web Store and Firefox are trademarks of Google and Mozilla. Font: [Jersey 25](https://fonts.google.com/specimen/Jersey+25) (OFL).
